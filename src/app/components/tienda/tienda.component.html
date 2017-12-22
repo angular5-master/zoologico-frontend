@@ -1,0 +1,25 @@
+Padre: Tienda
+<h2>Esta es la Tienda {{ titulo }} {{ nombreDelParque }}</h2>
+<ul>
+	<li>Camisa Roja</li>
+	<li>Camisa Verde</li>
+	<li>Camisa Negra</li>
+	<li>Camisa Morada</li>
+</ul>
+
+<!-- <p>{{ attrParque.nombre }}</p> -->
+
+<p> 
+	Nombre del Parque:
+	<input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()" />
+</p>
+
+<hr>
+
+<p *ngIf="nombreDelParque">
+	Hijo: Parque
+	<parques [nombre]="nombreDelParque"
+			 (pasameLosDatos)="emitirDatos($event)"></parques>
+
+</p>
+
