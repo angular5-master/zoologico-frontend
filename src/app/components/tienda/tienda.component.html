@@ -1,18 +1,31 @@
 Padre: Tienda
-<h2>Esta es la Tienda {{ titulo }} {{ nombreDelParque }}</h2>
+<h2>Organización {{ titulo }} {{ nombreDelParque }}</h2>
 <ul>
-	<li>Camisa Roja</li>
-	<li>Camisa Verde</li>
-	<li>Camisa Negra</li>
-	<li>Camisa Morada</li>
+	<li>Credito Emprendedor</li>
+	<li>Asesoria Financiera</li>
+	<li>Linea Aktiva</li>
+	<li>Linea Finaktiva</li>
 </ul>
 
 <!-- <p>{{ attrParque.nombre }}</p> -->
 
-<p> 
-	Nombre del Parque:
+<p>
+	Nombre de Emprendimiento:
 	<input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()" />
 </p>
+
+<p>
+  Resultado: {{ nombreDelParque }}
+</p>
+
+<div *ngIf="miParque">
+  <ol>
+    <li>{{ miParque.nombre }}</li>
+    <li>{{ miParque.metros }}</li>
+    <li>{{ miParque.vegetacion }}</li>
+    <li>{{ miParque.abierto }}</li>
+  </ol>
+</div>
 
 <hr>
 

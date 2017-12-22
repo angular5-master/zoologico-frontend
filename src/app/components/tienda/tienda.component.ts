@@ -11,10 +11,10 @@ import { Component } from '@angular/core';
 export class TiendaComponent {
 	public titulo;
 	public nombreDelParque;
-	public attrParque;
+	public miParque;
 
 	constructor(){
-		this.titulo = 'Don Alfredo';
+		this.titulo = 'Finaktiva';
 	}
 
 	mostrarNombre(){
@@ -23,7 +23,7 @@ export class TiendaComponent {
 
 	emitirDatos(event){
 		console.log(event);
-		this.attrParque = event;
+		this.miParque = event;
 
 	}
 }
