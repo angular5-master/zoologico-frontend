@@ -1,13 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
-Principal: App
 <div>
-  <h2>
-    Componente principal - {{ title }}!
-  </h2>
+  <h1>
+    {{ title }}!
+  </h1>
+
+  <a [routerLink]="['/home']">Inicio</a>
+  <a [routerLink]="['/animals']">Animales</a>
+  <a [routerLink]="['/keepers']">Cuidadores</a>
+  <a [routerLink]="['/tienda']">Tienda</a>
+  <a [routerLink]="['/contact']">Contactos</a>
 
   <hr>
 
-  <tienda></tienda>
+  <!-- <tienda></tienda> -->
+  <router-outlet></router-outlet>
 
 </div>
 
