@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'Aplicacion Animales';
+  emailContacto: string;
+
+  ngOnInit(){
+    this.emailContacto = localStorage.getItem('emailContacto');
+    // console.log(localStorage.getItem('emailContacto'));
+  }
+
+  ngDoCheck() {
+    this.emailContacto = localStorage.getItem('emailContacto');
+    
+  }
+  borrarEmail(){
+    // Borra el item del Local Storage
+    localStorage.removeItem('emailContacto');
+    // Vaciar todos los elementos del Local Storage
+    localStorage.clear();
+    this.emailContacto = null
+  }
 }
