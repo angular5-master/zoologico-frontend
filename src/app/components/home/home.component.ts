@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class HomeComponent implements OnInit {
-  title = 'Home';
+  title = 'Bienvenido a NGZOO';
 
   ngOnInit(){
     console.log('home.component cargado!!')
