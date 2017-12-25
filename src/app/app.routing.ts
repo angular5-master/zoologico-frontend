@@ -1,6 +1,9 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+declare var jQuery:any;
+declare var $:any;
+
 // Component
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { HomeComponent } from './components/home/home.component';
