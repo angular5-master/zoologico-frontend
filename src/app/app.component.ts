@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AppComponent implements OnInit{
-  title = 'Aplicacion Animales';
+  title = 'ngZoo';
   emailContacto: string;
 
   ngOnInit(){

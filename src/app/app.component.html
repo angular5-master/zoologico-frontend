@@ -1,22 +1,57 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <h1>
-    {{ title }}!
-  </h1>
+<div class="navigation col-lg-12">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      
+      <div class="navbar-header">
+        <a [routerLink]="['/home']" class="navbar-brand">{{ title }}</a> 
+      </div>
 
-  <a [routerLink]="['/home']">Inicio</a>
-  <a [routerLink]="['/animals']">Animales</a>
-  <a [routerLink]="['/keepers']">Cuidadores</a>
-  <a [routerLink]="['/tienda']">Tienda</a>
-  <a [routerLink]="['/contact']">Contactos</a>
-
-  <span *ngIf="emailContacto"><strong>E-mail </strong>{{ emailContacto }} <button (click)="borrarEmail()">Eliminar email de contacto</button></span>
-  
-  <hr>
-
-  <!-- <tienda></tienda> -->
-  <router-outlet></router-outlet>
-
+      <ul class="nav navbar-nav">
+          <li>
+            <a [routerLink]="['/home']">
+              <span class="glyphicon glyphicon-home"></span>
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/animals']">
+              <span class="glyphicon glyphicon-star"></span>
+              Animales
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/keepers']">
+              <span class="glyphicon glyphicon-user"></span>
+              Cuidadores
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/tienda']">
+              <span class="glyphicon glyphicon-gift"></span>
+              Tienda
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/contact']">
+              <span class="glyphicon glyphicon-comment"></span>
+              Contactos
+            </a>
+          </li>
+          <li class="hidden">
+            <span *ngIf="emailContacto">
+              <strong>E-mail </strong>{{ emailContacto }} 
+              <button (click)="borrarEmail()">Eliminar email de contacto</button>
+            </span>
+          </li>
+      </ul>
+    </div>
+  </nav>
 </div>
+
+<div class="col-lg-11">
+  <router-outlet></router-outlet>
+</div>
+
 
 
