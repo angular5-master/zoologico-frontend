@@ -6,6 +6,18 @@
 		ngOnChanges. Add 'implements OnInit' to the class.
 </p>
 
+<div id="caja" style="border:1px solid black; width:250px; height:50px">
+		Called after the constructor, initializing input properties, and the first call to 
+		ngOnChanges. Add 'implements OnInit' to the class.
+</div>
+
+<br>
+<simple-tiny
+  [elementId]="'descripcionTienda'"
+  (onEditorKeyup)="textoRichEditor($event)"
+  >
+</simple-tiny>
+
 <hr/>
 Padre:
 <h2>Organización {{ titulo }} {{ nombreDelParque }}</h2>

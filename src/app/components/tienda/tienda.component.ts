@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var jQuery: any;
-declare var $: any;
+
 
 @Component({
 	selector: 'tienda',
@@ -24,6 +23,8 @@ export class TiendaComponent implements OnInit {
 			console.log('click desde jquery');
 			$('#textojq').slideToggle();
 		});	
+
+		$("#caja").dotdotdot({});
 	}
 
 	mostrarNombre(){
@@ -34,5 +35,9 @@ export class TiendaComponent implements OnInit {
 		console.log(event);
 		this.miParque = event;
 
+	}
+
+	textoRichEditor(content){
+		console.log(content);
 	}
 }
