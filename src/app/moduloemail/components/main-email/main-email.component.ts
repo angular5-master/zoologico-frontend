@@ -17,7 +17,7 @@ export class MainEmailComponent implements OnInit{
   title = 'Modulo de email';
 
   ngOnInit(){
-      console.log("Componente principal cargado");
+      console.log("Componente principal E-mail cargado");
   }
 
 }
