@@ -7,4 +7,6 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 
 export class ListComponent {
   title = 'Listado';
+  //numbers = [0, 1, 2, 3, 4, 5];
+  numbers = Array(10);
 }
