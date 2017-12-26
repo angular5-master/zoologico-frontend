@@ -4,18 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders } from './app.routing';
 
+// Importar nuestro nuevo modulo
+import { ModuloEmailModule } from './moduloemail/moduloemail.module';
+
 // Componentes
 import { AppComponent } from './app.component';
 import { SimpleTinyComponent } from './components/simple-tiny/simple-tiny.component';
+
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { ParquesComponent } from './components/parques/parques.component';
 import { HomeComponent } from './components/home/home.component';
 import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { KeepersComponent } from './components/keepers/keepers.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    ModuloEmailModule
   ],
   providers: [
     appRoutingProviders
