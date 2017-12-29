@@ -1,23 +1,27 @@
 <div class="col-lg-6">
     <h1>{{title}}</h1>
 
-    <form>
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-10">
         <p>
             <label>Nombre</label>
-            <input type="text" name="name" class="form-control" required>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" class="form-control" required>
+            <span *ngIf="!name.valid && name.touched">El Nombre es Obligatorio</span>
         </p>
         <p>
             <label>Apellidos</label>
-            <input type="text" name="surname" class="form-control" required>
+            <input type="text" name="surname" #surname="ngModel" [(ngModel)]="user.surname" class="form-control" required>
+            <span *ngIf="!surname.valid && surname.touched">Los Apellidos son Obligatorio</span>
         </p>
         <p>
             <label>E-mail</label>
-            <input type="email" name="email" class="form-control" required>
+            <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required>
+            <span *ngIf="!email.valid && email.touched">El E-mail es Obligatorio</span>
         </p>
         <p>
             <label>Contraseña</label>
-            <input type="password" name="password" class="form-control" required>
+            <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" required>
+            <span *ngIf="!password.valid && password.touched">La contraseña no es correcta</span>
         </p>
-        <input type="submit" value="{{title}}" class="btn btn-primary" />
+        <input type="submit" value="{{title}}" class="btn btn-primary" [disabled]="!registerForm.form.valid"/>
     </form>
 </div>
