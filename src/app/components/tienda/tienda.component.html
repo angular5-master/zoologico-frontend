@@ -1,75 +1,76 @@
-<h4>Animaciones Simples con Estados</h4>
-<a class="boton_activo btn btn-success" [@marcar]='status' (click)="cambiarEstado(status)">
-	<span *ngIf="status =='inactive'">Inactivado</span>
-	<span *ngIf="status =='active'">Activado</span>
-</a>
-<br>
-<hr>
-<h4>Animaciones CSS 3</h4>
-<a class="boton_transiciones">Transiciones</a>
+<div class="col-lg-12" [@fadeIn]>
+	<h4>Animaciones Simples con Estados</h4>
+	<a class="boton_activo btn btn-success" [@marcar]='status' (click)="cambiarEstado(status)">
+		<span *ngIf="status =='inactive'">Inactivado</span>
+		<span *ngIf="status =='active'">Activado</span>
+	</a>
+	<br>
+	<hr>
+	<h4>Animaciones CSS 3</h4>
+	<a class="boton_transiciones">Transiciones</a>
 
-<div class="clearfix"></div>
+	<div class="clearfix"></div>
 
-<div class="caja_animada"></div>
+	<div class="caja_animada"></div>
 
-<hr>
-<h4>Utilizar JQuery dentro de Angular</h4>
-<button id="botonjq">Mostrar Texto</button>
-<br>
+	<hr>
+	<h4>Utilizar JQuery dentro de Angular</h4>
+	<button id="botonjq">Mostrar Texto</button>
+	<br>
 
-<p id="textojq" class="alert alert-warning">
-		Called after the constructor, initializing input properties, and the first call to 
-		ngOnChanges. Add 'implements OnInit' to the class.
-</p>
-<br>
-<div id="caja" style="border:1px solid black; width:250px; height:50px">
-		Called after the constructor, initializing input properties, and the first call to 
-		ngOnChanges. Add 'implements OnInit' to the class.
+	<p id="textojq" class="alert alert-warning">
+			Called after the constructor, initializing input properties, and the first call to 
+			ngOnChanges. Add 'implements OnInit' to the class.
+	</p>
+	<br>
+	<div id="caja" style="border:1px solid black; width:250px; height:50px">
+			Called after the constructor, initializing input properties, and the first call to 
+			ngOnChanges. Add 'implements OnInit' to the class.
+	</div>
+
+	<br>
+	<simple-tiny
+		[elementId]="'descripcionTienda'"
+		(onEditorKeyup)="textoRichEditor($event)"
+		>
+	</simple-tiny>
+
+	<hr/>
+	Padre:
+	<h2>Organización {{ titulo }} {{ nombreDelParque }}</h2>
+	<ul>
+		<li>Credito Emprendedor</li>
+		<li>Asesoria Financiera</li>
+		<li>Linea Aktiva</li>
+		<li>Linea Finaktiva</li>
+	</ul>
+
+	<!-- <p>{{ attrParque.nombre }}</p> -->
+
+	<p>
+		Nombre de Emprendimiento:
+		<input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()" />
+	</p>
+
+	<p>
+		Resultado: {{ nombreDelParque }}
+	</p>
+
+	<div *ngIf="miParque">
+		<ol>
+			<li>{{ miParque.nombre }}</li>
+			<li>{{ miParque.metros }}</li>
+			<li>{{ miParque.vegetacion }}</li>
+			<li>{{ miParque.abierto }}</li>
+		</ol>
+	</div>
+
+	<hr>
+
+	<p *ngIf="nombreDelParque">
+		Hijo: Parque
+		<parques [nombre]="nombreDelParque"
+				(pasameLosDatos)="emitirDatos($event)"></parques>
+
+	</p>
 </div>
-
-<br>
-<simple-tiny
-  [elementId]="'descripcionTienda'"
-  (onEditorKeyup)="textoRichEditor($event)"
-  >
-</simple-tiny>
-
-<hr/>
-Padre:
-<h2>Organización {{ titulo }} {{ nombreDelParque }}</h2>
-<ul>
-	<li>Credito Emprendedor</li>
-	<li>Asesoria Financiera</li>
-	<li>Linea Aktiva</li>
-	<li>Linea Finaktiva</li>
-</ul>
-
-<!-- <p>{{ attrParque.nombre }}</p> -->
-
-<p>
-	Nombre de Emprendimiento:
-	<input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()" />
-</p>
-
-<p>
-  Resultado: {{ nombreDelParque }}
-</p>
-
-<div *ngIf="miParque">
-  <ol>
-    <li>{{ miParque.nombre }}</li>
-    <li>{{ miParque.metros }}</li>
-    <li>{{ miParque.vegetacion }}</li>
-    <li>{{ miParque.abierto }}</li>
-  </ol>
-</div>
-
-<hr>
-
-<p *ngIf="nombreDelParque">
-	Hijo: Parque
-	<parques [nombre]="nombreDelParque"
-			 (pasameLosDatos)="emitirDatos($event)"></parques>
-
-</p>
-
