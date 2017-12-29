@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 const appRoutes: Routes = [
     // Ruta por defecto
@@ -22,6 +24,8 @@ const appRoutes: Routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'keepers', component: KeepersComponent },
     { path: 'tienda', component: TiendaComponent },
+    { path: 'registro', component: RegisterComponent },
+    { path: 'login', component: LoginComponent },
 
     // Ruta de Error
     { path: '**', component: HomeComponent }
