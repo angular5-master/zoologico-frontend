@@ -22,6 +22,9 @@ import { KeepersComponent } from './components/keepers/keepers.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 
+// Servicios
+import { UserService } from './services/user.service';
+
 @NgModule({
   declarations: [
     AppComponent,
