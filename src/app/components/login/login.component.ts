@@ -61,6 +61,8 @@ export class LoginComponent implements OnInit {
                         // Guardar en el localStorage el Token
                         localStorage.setItem('token', this.token);
                         this.status = 'success'
+
+                        this._router.navigate(['/']);
                       }
                     },
                     error => {
