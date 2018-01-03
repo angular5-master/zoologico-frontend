@@ -10,6 +10,12 @@ import { ListComponent } from './components/list/list.component';
 import { AddComponent } from './components/add/add.component';
 import { EditComponent } from './components/edit/edit.component';
 
+// Servicios
+import { UserService } from '../services/user.service';
+
+// Guards
+import { AdminGuard } from '../services/admin.guard';
+
 
 
 @NgModule({
@@ -26,8 +32,14 @@ import { EditComponent } from './components/edit/edit.component';
         AdminRoutingModule
     ],
     exports: [
-
+        MainComponent,
+        ListComponent,
+        AddComponent,
+        EditComponent
     ],
-    providers: [],
+    providers: [
+        AdminGuard,
+        UserService
+    ],
 })
 export class AdminModule {}
