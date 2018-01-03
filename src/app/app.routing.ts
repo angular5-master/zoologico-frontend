@@ -12,6 +12,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
 
 const appRoutes: Routes = [
     // Ruta por defecto
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
     { path: 'tienda', component: TiendaComponent },
     { path: 'registro', component: RegisterComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'mis-datos', component: UserEditComponent },
 
     // Ruta de Error
     { path: '**', component: HomeComponent }

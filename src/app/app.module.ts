@@ -21,6 +21,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
 
 // Servicios
 import { UserService } from './services/user.service';
@@ -36,7 +37,8 @@ import { UserService } from './services/user.service';
     KeepersComponent,
     SimpleTinyComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
