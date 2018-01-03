@@ -6,7 +6,7 @@
     </div>
 
     <div class="alert alert-danger" *ngIf="status == 'error'">
-            No haz actualizado tu información corrctamente.
+        No haz actualizado tu información correctamente.
     </div>
 
 
@@ -26,6 +26,15 @@
             <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required>
             <span *ngIf="!email.valid && email.touched">El E-mail es Obligatorio</span>
         </p>
+        <div class="image_for_edit" *ngIf="user.image && user.image != 'null'" >
+            <img src="{{ url + 'get-image-file/' + user.image }}" />
+        </div>
+
+        <p>
+            <label>Sube tu Avatar</label>
+            <input type="file" placeholder="Subir imagen" (change)="fileChangeEvent($event)"/>
+        </p>
+
         <input type="submit" value="{{title}}" class="btn btn-primary" [disabled]="!userEditForm.form.valid"/>
     </form>
 </div>

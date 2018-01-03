@@ -26,6 +26,23 @@
     border-bottom: 3px solid orange;
 }
 
+.image_for_edit img{
+    width: 60px;
+}
+
+.avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 700px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-right: 2px;
+}
+
+.avatar img{
+    height: 45px;
+}
+
 #email{
     padding: 20px;
 }

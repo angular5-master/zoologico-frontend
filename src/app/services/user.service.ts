@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 import { GLOBAL } from './global';
@@ -57,5 +57,18 @@ export class UserService{
         }
 
         return this.token;
+    }
+
+    updateUser(user_to_update){
+        let params = JSON.stringify(user_to_update);
+        let headers = new Headers({
+            'Content-Type': 'application/json',
+            'Authorization': this.getToken()    
+        });
+
+        return this._http.put(this.url+'update-user/'+user_to_update._id, params, {headers: headers})
+                         .map(res => res.json());
+
+        
     }
 }
