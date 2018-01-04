@@ -16,14 +16,16 @@ import { UserService } from '../services/user.service';
 // Guards
 import { AdminGuard } from '../services/admin.guard';
 
-
+// Pipes
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
     declarations: [
         MainComponent,
         ListComponent,
         AddComponent,
-        EditComponent
+        EditComponent,
+        SearchPipe
     ],
     imports: [ 
         CommonModule,
