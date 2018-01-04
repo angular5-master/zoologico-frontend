@@ -6,7 +6,7 @@ import { AnimalService } from '../../../services/animal.service';
 import { UserService } from '../../../services/user.service';
 import { UploadService } from '../../../services/upload.service';
 import { Animal } from '../../../models/animal';
-import { error } from 'selenium-webdriver';
+//import { error } from 'selenium-webdriver';
 
 @Component({
   selector: 'admin-add',
