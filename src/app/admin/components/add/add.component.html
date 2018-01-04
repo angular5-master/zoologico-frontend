@@ -23,6 +23,12 @@
                 El año es obligatorio
             </span>
         </p>
+
+        <div *ngIf="is_edit && animal.image">
+            <div class="image_for_edit">
+                <img src="{{ url + 'get-image-animal/' + animal.image }}" />
+            </div>
+        </div>
           
         <p>
             <label>Imagen del Animal</label>

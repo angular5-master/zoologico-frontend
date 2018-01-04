@@ -45,13 +45,16 @@ export class UserEditComponent implements OnInit{
                     localStorage.setItem('identity', JSON.stringify(this.user));
 
                     // Subida de Imagen
+                    if(!this.filesToUpload){
+                    
+                    }else{
                     this._uploadService.makeFileRequest(this.url+'upload-image-user/'+this.user._id, [], this.filesToUpload, this.token, 'image')
                         .then((result: any) => {
 
                                 this.user.image = result.image;
                                  localStorage.setItem('identity', JSON.stringify(this.user));
                         });
-
+                    }
                 }
 
             },
