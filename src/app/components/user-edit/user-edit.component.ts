@@ -48,16 +48,9 @@ export class UserEditComponent implements OnInit{
                     this._uploadService.makeFileRequest(this.url+'upload-image-user/'+this.user._id, [], this.filesToUpload, this.token, 'image')
                         .then((result: any) => {
 
-                            if(this._uploadService.makeFileRequest != null){
                                 this.user.image = result.image;
                                  localStorage.setItem('identity', JSON.stringify(this.user));
-                            }
-
-                            
-                          
                         });
-
-                        console.log(this.user);
 
                 }
 
