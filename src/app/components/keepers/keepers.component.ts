@@ -3,7 +3,7 @@ import { fadeIn } from '../animation';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
 import { GLOBAL } from '../../services/global';
-import { NgForOf } from '@angular/common/src/directives/ng_for_of';
+//import { NgForOf } from '@angular/common/src/directives/ng_for_of';
 
 @Component({
   selector: 'keepers',

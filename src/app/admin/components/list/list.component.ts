@@ -8,10 +8,15 @@ import { UploadService } from '../../../services/upload.service';
 import { Animal } from '../../../models/animal';
 import { error } from 'selenium-webdriver';
 
+import { fadeLateral } from '../../animation'
+
+ 
+
 @Component({
   selector: 'admin-list',
   templateUrl: './list.component.html',
-  providers: [AnimalService, UserService]
+  providers: [AnimalService, UserService], 
+  animations: [fadeLateral]
 })
 
 export class ListComponent implements OnInit{

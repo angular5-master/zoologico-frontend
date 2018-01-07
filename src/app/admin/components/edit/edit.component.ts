@@ -7,11 +7,10 @@ import { UserService } from '../../../services/user.service';
 import { UploadService } from '../../../services/upload.service';
 import { Animal } from '../../../models/animal';
 
-
 @Component({
   selector: 'admin-edit',
   templateUrl: '../add/add.component.html',
-  providers: [UserService, AnimalService, UploadService]
+  providers: [UserService, AnimalService, UploadService],
 })
 
 export class EditComponent implements OnInit{
